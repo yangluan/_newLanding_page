@@ -1,0 +1,347 @@
+
+<!DOCTYPE html>
+<!--[if IE 7]> <html lang="en" class="ie7"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+    <title>天天乐抓娃娃落地页</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta property="og:type" content="">
+    <meta property="og:url" content="">
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta name="apple-mobile-web-app-title" content="">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no minimal-ui">
+    <link rel="dns-prefetch" href="//www.pgyer.com">
+    <link rel="dns-prefetch" href="//o1wh05aeh.qnssl.com">
+    <link rel="dns-prefetch" href="//o1whyeemo.qnssl.com">
+    <link rel="dns-prefetch" href="//static.pgyer.com">
+    <link rel="shortcut icon" href="https://static.pgyer.com/static-20171214/assets/img/favicon.ico" />
+    <link rel="stylesheet" href="https://static.pgyer.com/static-20171214/assets/build/header_include.min.css">
+    <link rel="stylesheet" href="https://static.pgyer.com/static-20171214/assets/css/appView.css">
+    <link rel="stylesheet" href="https://static.pgyer.com/static-20171214/assets/css/viewColorful.css">
+    <style>
+        ._rightHigShow{
+            width: 100%;
+            height: 12rem;
+            background-color: black;
+            display: none;
+            color: white;
+            line-height: 12rem;
+            text-align: center;
+            font-size: 2rem;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="_rightHigShow" id="rightHigShow">
+    点击右上角,在浏览器中打开!
+</div>
+
+<script>
+    var rightHigShow = document.getElementById('rightHigShow');
+    //微信微博
+    var browser = {
+        versions: function() {
+            var u = navigator.userAgent,
+                app = navigator.appVersion;
+            return { //移动终端浏览器版本信息
+                trident: u.indexOf('Trident') > -1, //IE内核
+                presto: u.indexOf('Presto') > -1, //opera内核
+                webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核
+                gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, //火狐内核
+                mobile: !!u.match(/AppleWebKit.*Mobile.*/), //是否为移动终端
+                ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
+                android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或uc浏览器
+                iPhone: u.indexOf('iPhone') > -1, //是否为iPhone或者QQHD浏览器
+                iPad: u.indexOf('iPad') > -1, //是否iPad
+                webApp: u.indexOf('Safari') == -1 //是否web应该程序，没有头部与底部
+            };
+        }(),
+        language: (navigator.browserLanguage || navigator.language).toLowerCase()
+    }
+    if (browser.versions.mobile) { //判断是否是移动设备打开。browser代码在下面
+        var ua = navigator.userAgent.toLowerCase(); //获取判断用的对象
+        if (ua.match(/MicroMessenger/i) == "micromessenger") {//在微信中打开
+            rightHigShow.style.display = 'block';
+        }
+        if (ua.match(/WeiBo/i) == "weibo") {//在新浪微博客户端打开
+            rightHigShow.style.display = 'block';
+        }
+        if (ua.match(/QQ/i) == "qq") {//在QQ空间打开
+            rightHigShow.style.display = 'block';
+        }
+        if (browser.versions.ios) {//是否在IOS浏览器打开
+
+
+        }
+        if(browser.versions.android){//是否在安卓浏览器打开
+            rightHigShow.style.display = 'none';
+        }
+    } else {//PC浏览器打开
+        rightHigShow.style.display = 'none';
+    }
+</script>
+
+<!-- wechat share icon -->
+<div style="display:none;">
+    <img src="https://o1wh05aeh.qnssl.com/image/view/app_icons/468591ab442cf62a82423ceeeccfc855/f300" onerror="javascript:this.src='https://static.pgyer.com/static-20171214/assets/img/default-icon.png';" />
+</div>
+
+<!--=== Breadcrumbs ===-->
+<div class="row-fluid  margin-bottom-20" style="z-index:-2;">
+    <div class="" id="header">
+
+
+
+    </div>
+</div><!--/breadcrumbs-->
+<!--=== End Breadcrumbs ===-->
+
+
+<!--=== Content Part ===-->
+<div class="container content">
+
+
+    <div class="view row">
+        <div class="span12 margin-bottom-30 " id="appicon-bg">
+            <a href="javascript:void(0);" onclick="go_address()"><img src="https://zhuawawa-cdn.hljoy.com/1.0.6/images/codes/klzww.png" class="appicon" onerror="javascript:this.src='';" /></a>
+            <div>
+            </div>
+        </div>
+        <div class="span12" style="text-align:center;padding-top:10px;">
+            <h2 style="color:#333;size:24px;margin-bottom: -5px;">
+                <i class="fa fa-android" aria-hidden="true"></i>
+                天天乐抓娃娃                        </h2>
+        </div>
+
+        <!--<div class="span12 gray-text" style="text-align:center;">-->
+            <!--<ul class="breadcrumb pb-20" >-->
+                <!--<li>版本：1.0.6 (build 2)</li>-->
+                <!--<li>大小：20.2 MB</li>-->
+                <!--<li >更新时间：2017-12-11</li>-->
+            <!--</ul>-->
+        <!--</div>-->
+
+    </div>
+
+    <div id="" class="view row margin-bottom-30 col-md-6 col-md-offset-3" style="padding-top:26px;">
+        <div class="col-md-12">
+            <div class="span12 gray-text" style="text-align:center;margin-top: 1rem">
+                <img src="https://zhuawawa-cdn.hljoy.com/1.0.6/images/codes/klzww_1.png" class="qrcode " />
+            </div>
+        </div>
+        <div class="col-md-12" style="margin-top:20px;">
+            <div class="install-btn" >
+                <div class="span12 margin-bottom-20" style="text-align:center;">
+                    <div class="spinner">
+                        <div id="showtext">正在下载，请在浏览器中查看下载进度</div>
+                        <div class="loading"></div>
+                        <a href="javascript:void(0);" onclick="go_address()" id="down_load"  class="btn-u btn-u-lg" >  点击安装</a>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="span12 gray-text" style="text-align:center; ">
+                <p style="padding-top:10px;color:#969b9d;">或者用手机扫描二维码安装</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Start install -->
+    <div id="" class="view row" style="margin-top:30px;">
+
+        <div class="span12 margin-bottom-20" style="text-align:center;display:none;">
+            <div class="spinner">
+                <div id="showtext">正在下载，请在浏览器中查看下载进度</div>
+                <div class="loading"></div>
+                <a href="javascript:void(0);" onclick="javascript:install_loading();" id="down_load"  class="btn-u btn-u-lg btn-u-green"><i class="fa fa-download"></i> 点击安装</a>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+
+    <!--<div class="row">-->
+        <!--<div class="col-md-8 col-md-offset-2">-->
+            <!--<hr class="devider devider-dotted" />-->
+        <!--</div>-->
+    <!--</div>-->
+
+
+
+</div><!--/container-->
+<!--=== End Content Part ===-->
+
+
+
+
+<!--</div>-->
+<!--=== Copyright ===-->
+<link rel="stylesheet" href="https://static.pgyer.com/static-20171214/assets/plugins/sky-forms/version-2.0.1/css/custom-sky-forms.css">
+<link href="https://static.pgyer.com/static-20171214/fineuploader/fineuploader.css" rel="stylesheet" type="text/css"/>
+
+<div id="reportAppModal"></div>
+<div id="loginTelModalDiv"></div>
+
+<!--=== End Copyright ===-->
+<!-- JS Global Compulsory -->
+<script type="text/javascript">
+    var userKey = "";
+</script>
+<script type="text/javascript" src="https://static.pgyer.com/static-20171214/assets/build/app_view.min.js"></script>
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-52814215-1', 'auto');
+    ga('send', 'pageview');
+
+    // push to baidu
+    (function(){
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        }
+        else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+<!--[if lt IE 9]>
+<script src="https://static.pgyer.com/static-20171214/assets/plugins/respond.js"></script>
+<![endif]-->
+<!-- JS Page Level -->
+<script src="https://static.pgyer.com/static-20171214/fineuploader/jquery.fine-uploader.min.js"></script>
+<script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script type="text/javascript">
+    var aType = 'android',
+        aKey = 'e78bd06ff671549ce1b0571acd043cec',
+        submiting = '请稍候...',
+        submitText = '立即进入',
+        isMobileRequest = '',
+        isMobilePhone = '',
+        askBrowserAlert = '请在手机上使用浏览器打开本页面，或者扫描下面的二维码，即可安装',
+        forIosAlert = '您的手机是Android系统，无法安装iOS应用';
+    forAndroidAlert = '您的手机是iOS系统，无法安装Android应用';
+    isWechatRequest = '',
+        reminderWechatContent = '点击右上角按钮，然后在弹出的菜单中，点击在浏览器中打开，即可安装',
+        isQQRequest = '',
+        reminderQQContent = '点击右上角按钮，然后在弹出的菜单中，点击在浏览器中打开，即可安装',
+        isUCRequest = '',
+        reminderUCContent = '您当前使用的是 UC 浏览器，该浏览器不支持安装App。请在浏览器中打开，即可安装',
+        isWeiboRequest = '',
+        reminderWeiboContent = '请点击微博右上角按钮，然后在弹出的菜单中，点击在浏览器中打开，即可安装',
+        browseType = 'other',
+        appInstallPasswordAlert = '请输入密码',
+        appStoreUrl = '',
+        reminderWechatDownloadContent = '请点击微信右上角按钮，然后在弹出的菜单中，点击在浏览器中打开，即可下载',
+        reminderUCDownloadContent = '您当前使用的是 UC 浏览器，该浏览器不支持安装App。请在浏览器中打开，即可下载',
+        reminderWeiboDownloadContent = '请点击微博右上角按钮，然后在弹出的菜单中，点击在浏览器中打开，即可下载',
+        reminderQQDownloadContent = '请点击QQ右上角按钮，然后在弹出的菜单中，点击在浏览器中打开，即可下载',
+        downloadOnlyForCertification = 1,
+        userIsCertification = true,
+        isIOS = 0,
+        unableDownload = '应用提供者未进行实名认证，无法下载',
+        reportFileDeleteBtn = '删除',
+        downloadPayMoney = '0',
+        deleteFileConfirm = '确定要删除文件',
+        appTemplate = 'colorful',
+        loginFirst = '请先登录',
+        appReportIsemail = '请输入正确的邮箱地址',
+        appReportIsreason = '请输入举报原因',
+        appReportMinreason = '举报原因不能少于20个字符',
+        appReportMaxreason = '举报原因不能超过500个字符'
+    appReportIsemail = '请输入正确的邮箱地址',
+        shortcutUrl = 'hyzww',
+        mustDisplayAdSense = 0,
+        showAppAd = 1,
+        aKeyForAdSense = 'e78bd06ff671549ce1b0571acd043cec',
+        appReportResult = '';
+
+    var isUserLogged = false;
+    if ('') {
+        isUserLogged = true;
+    }
+    $(document).ready(function() {
+        App.init();
+        $('#reportClick').click(function () {
+            ajaxLoadReportModal();
+        });
+
+        $('#inhouseClick').click(function () {
+            $("#inhouseTip").modal('show');
+        });
+
+        $('#form').submit(function() {
+            if ($('#password').val() == '') {
+                alert(appInstallPasswordAlert);
+                return false;
+            }
+            saveData();
+            return false;
+        });
+
+        initView();
+
+        $('.history_show_more').click(function() {
+            loadOtherApps();
+        });
+
+    });
+
+    // wechat
+    wx.config({
+        debug: false,
+        appId: 'wx5c466490aaef0cc3',
+        timestamp: 1513750994,
+        nonceStr: '032eb5715ee0907820d1e4edc9211908',
+        signature: 'fbb5c92707e78821306230703e6cf7e592f0b243',
+        jsApiList: ['onMenuShareTimeline', 'onMenuShareAppMessage', 'onMenuShareQQ']
+    });
+
+
+
+
+    wx.ready(function(){
+        wx.onMenuShareAppMessage({
+            title: '天天乐抓娃娃',
+            desc: decodeURIComponent('%E7%89%88%E6%9C%AC%3A+1.0.6+%28build+2%29+%E5%A4%A7%E5%B0%8F%3A+20.2+MB+%E5%A4%A9%E5%A4%A9%E4%B9%90%E6%8A%93%E5%A8%83%E5%A8%83%EF%BC%8C%E5%9C%A8%E7%BA%BF%E7%9B%B4%E6%92%AD%E6%8A%93%E5%A8%83%E5%A8%83%EF%BC%8C%E9%9A%8F%E6%97%B6%E9%9A%8F%E5%9C%B0%E5%8F%AF%E4%BB%A5%E7%8E%A9%E7%9A%84%E5%8F%A3%E8%A2%8B%E5%A8%83%E5%A8%83%E6%9C%BA%E3%80%82%E5%8D%83%E6%9C%BA%E5%9C%A8%E7%BA%BF%E3%80%81%E6%83%B3%E6%8A%93%E5%B0%B1%E6%8A%93%E3%80%82%E5%93%81%E8%B4%A8%E5%85%AC%E4%BB%94%E3%80%81%E6%AF%8F%E6%97%A5%E4%B8%8A%E6%96%B0%E3%80%82%E9%AB%98'.replace(/\+/g, '%20')),
+            link: 'https://www.pgyer.com/hyzww',
+            imgUrl: 'https://o1wh05aeh.qnssl.com/image/view/app_icons/468591ab442cf62a82423ceeeccfc855/f300'
+        });
+        wx.onMenuShareTimeline({
+            title: '天天乐抓娃娃',
+            link: 'https://www.pgyer.com/hyzww',
+            imgUrl: 'https://o1wh05aeh.qnssl.com/image/view/app_icons/468591ab442cf62a82423ceeeccfc855/f300'
+        });
+        wx.onMenuShareQQ({
+            title: '天天乐抓娃娃',
+            desc: decodeURIComponent('%E7%89%88%E6%9C%AC%3A+1.0.6+%28build+2%29+%E5%A4%A7%E5%B0%8F%3A+20.2+MB+%E5%A4%A9%E5%A4%A9%E4%B9%90%E6%8A%93%E5%A8%83%E5%A8%83%EF%BC%8C%E5%9C%A8%E7%BA%BF%E7%9B%B4%E6%92%AD%E6%8A%93%E5%A8%83%E5%A8%83%EF%BC%8C%E9%9A%8F%E6%97%B6%E9%9A%8F%E5%9C%B0%E5%8F%AF%E4%BB%A5%E7%8E%A9%E7%9A%84%E5%8F%A3%E8%A2%8B%E5%A8%83%E5%A8%83%E6%9C%BA%E3%80%82%E5%8D%83%E6%9C%BA%E5%9C%A8%E7%BA%BF%E3%80%81%E6%83%B3%E6%8A%93%E5%B0%B1%E6%8A%93%E3%80%82%E5%93%81%E8%B4%A8%E5%85%AC%E4%BB%94%E3%80%81%E6%AF%8F%E6%97%A5%E4%B8%8A%E6%96%B0%E3%80%82%E9%AB%98'.replace(/\+/g, '%20')),
+            link: 'https://www.pgyer.com/hyzww',
+            imgUrl: 'https://o1wh05aeh.qnssl.com/image/view/app_icons/468591ab442cf62a82423ceeeccfc855/f300'
+        });
+    });
+</script>
+<!--<script src="https://static.pgyer.com/static-20171214/assets/js/adAdsense.js"></script>-->
+<script type="text/javascript"> (function (w) { w.frontjsConfig = {token: 'c68f352d79ca00ed4b38afe12d899f6a', behaviour: 15, origin: ['pgyer.com', 'qnssl.com', 'google-analytics.com', 'bdstatic.com', 'google.com', 'googlesyndication.com', 'baidu.com']} })(window); </script> <script type="text/javascript" src="https://static.frontjs.com/dist/current/tracker.min.js" crossorigin="true"></script>
+
+</body>
+</html>
